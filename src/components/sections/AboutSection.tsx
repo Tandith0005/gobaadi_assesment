@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutSection = () => {
     return (
-        <section className="relative my-20 ">
+        <section className="relative mt-20 ">
             {/* Background with rounded top */}
             <div 
                 className="relative rounded-t-[350px] overflow-hidden min-h-[900px]"

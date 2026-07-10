@@ -6,7 +6,7 @@ import { RiGeminiFill } from "react-icons/ri";
 
 const VisionSection = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#FFFFFF]">
+    <section className="py-16 px-4 sm:px-6 lg:px-16 bg-[#FFFFFF]">
       <div className="flex flex-col justify-center lg:flex-row lg:gap-[98px] items-center my-[90px]">
         {/* Left Side - Content */}
         <div className="flex-1 space-y-6">
