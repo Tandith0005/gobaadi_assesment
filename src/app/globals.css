@@ -25,6 +25,26 @@ body {
   color: var(--color-brand-dark);
 }
 
+.field-mask {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 170px,
+    rgba(0,0,0,.2) 210px,
+    rgba(0,0,0,.6) 250px,
+    black 300px
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 170px,
+    rgba(0,0,0,.2) 210px,
+    rgba(0,0,0,.6) 250px,
+    black 300px
+  );
+}
+
 .grid-bg {
   --grid-color: rgba(255,255,255,.28);
 
