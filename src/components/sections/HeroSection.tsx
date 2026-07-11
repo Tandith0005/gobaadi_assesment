@@ -4,7 +4,8 @@ import { tusker } from "../../lib/fonts";
 
 const HeroSection = () => {
   return (
-    <div className="bg-gradient-to-br from-[#faf8f7] to-[#f0ece9] px-4 sm:px-6 lg:px-0 pt-10 lg:py-20 overflow-hidden">
+    <section id="home">
+      <div className="bg-gradient-to-br from-[#faf8f7] to-[#f0ece9] px-4 sm:px-6 lg:px-0 pt-10 lg:py-20 overflow-hidden">
       <div className="relative mx-auto max-w-[1350px]">
         <div className="space-y-4 lg:space-y-8 px-0 lg:px-6">
           {/* Top Row - Title & Cow Image */}
@@ -122,6 +123,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

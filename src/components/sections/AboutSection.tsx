@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="relative mt-10 sm:mt-16 lg:mt-20">
+    <section id="about" className="relative mt-10 sm:mt-16 lg:mt-20">
       <div className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[740px] overflow-hidden">
         {/* Field (Back) */}
         <div

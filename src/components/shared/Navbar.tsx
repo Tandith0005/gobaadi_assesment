@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { navLinks } from "@/src/constants/navigation";
@@ -10,10 +10,75 @@ import { IoClose, IoMenu } from "react-icons/io5";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Handle scroll to section
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Navbar height offset
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  // Handle Contact Us button click
+  const handleContactClick = () => {
+    scrollToSection("contact");
+  };
+
+  // Update active section based on scroll
+  useEffect(() => {
+    const sections = navLinks.map(link => link.href.replace("#", ""));
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-80px 0px -50% 0px",
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
+  // Check if a link is active
+  const isActive = (href: string) => {
+    if (href.startsWith("#")) {
+      return activeSection === href.replace("#", "");
+    }
+    return pathname === href;
   };
 
   return (
@@ -41,19 +106,22 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.href}
-                href={link.href}
-                className={`font-medium transition-colors ${
-                  pathname === link.href
+                onClick={() => scrollToSection(link.href.replace("#", ""))}
+                className={`font-medium transition-colors cursor-pointer ${
+                  isActive(link.href)
                     ? "text-[#000000] text-[18px] font-extrabold"
                     : "text-[#737373]"
                 }`}
               >
                 {link.label}
-              </Link>
+              </button>
             ))}
-            <button className="bg-linear-to-r from-[#C0612B] via-[#bd8b6e] to-[#C0612B] font-medium flex justify-center items-center gap-2 text-white py-2 px-4 rounded-xl whitespace-nowrap">
+            <button
+              onClick={handleContactClick}
+              className="bg-linear-to-r from-[#C0612B] via-[#bd8b6e] to-[#C0612B] font-medium flex justify-center items-center gap-2 text-white py-2 px-4 rounded-xl whitespace-nowrap cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
               <AiFillThunderbolt size={17} /> Contact Us
             </button>
           </div>
@@ -84,21 +152,23 @@ export default function Navbar() {
         >
           <div className="py-4 space-y-2 border-t border-gray-200">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.href}
-                href={link.href}
-                className={`block font-medium transition-colors px-3 py-3 rounded-lg ${
-                  pathname === link.href
+                onClick={() => scrollToSection(link.href.replace("#", ""))}
+                className={`block w-full text-left font-medium transition-colors px-3 py-3 rounded-lg ${
+                  isActive(link.href)
                     ? "text-[#000000] text-[18px] font-extrabold bg-[#f5f5f5]"
                     : "text-[#737373]"
                 }`}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
-              </Link>
+              </button>
             ))}
             <div className="pt-3 px-3">
-              <button className="bg-linear-to-r from-[#C0612B] via-[#bd8b6e] to-[#C0612B] font-medium flex justify-center items-center gap-2 text-white py-3 px-4 rounded-xl w-full">
+              <button
+                onClick={handleContactClick}
+                className="bg-linear-to-r from-[#C0612B] via-[#bd8b6e] to-[#C0612B] font-medium flex justify-center items-center gap-2 text-white py-3 px-4 rounded-xl w-full transition-all duration-300 hover:scale-105"
+              >
                 <AiFillThunderbolt size={17} /> Contact Us
               </button>
             </div>

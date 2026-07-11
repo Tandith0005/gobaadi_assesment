@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import {
@@ -13,8 +14,24 @@ import {
 } from "react-icons/fa";
 
 const ContactSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      const offset = 80;
+
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="relative bg-[#C0612B] overflow-hidden">
+    <section id="contact" className="relative bg-[#C0612B] overflow-hidden">
       {/* Solid background */}
       <div className="absolute inset-0 " />
 
@@ -118,12 +135,7 @@ const ContactSection = () => {
                 {/* Email */}
                 <div className="flex flex-row md:flex-col items-center md:items-start gap-4">
                   <div className="bg-white/20 p-3 rounded-full">
-                    <Image
-                      src="/mail.png"
-                      alt=""
-                      width={20}
-                      height={20}
-                    />
+                    <Image src="/mail.png" alt="" width={20} height={20} />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold text-[30px]">
@@ -138,12 +150,7 @@ const ContactSection = () => {
                 {/* Phone */}
                 <div className="flex flex-row md:flex-col items-center md:items-start gap-4">
                   <div className="bg-white/20 p-3 rounded-full">
-                    <Image
-                      src="/phone.png"
-                      alt=""
-                      width={20}
-                      height={20}
-                    />
+                    <Image src="/phone.png" alt="" width={20} height={20} />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold text-[30px]">
@@ -157,12 +164,7 @@ const ContactSection = () => {
               {/* Office */}
               <div className="flex flex-row md:flex-col items-center md:items-start gap-4">
                 <div className="bg-white/20 p-3 rounded-full">
-                  <Image
-                    src="/location.png"
-                    alt=""
-                    width={20}
-                    height={20}
-                  />
+                  <Image src="/location.png" alt="" width={20} height={20} />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold text-[30px]">
@@ -208,12 +210,7 @@ const ContactSection = () => {
                     type="submit"
                     className="w-full bg-[#C0612B] text-white font-semibold py-3 px-6 rounded-[16px] hover:bg-[#a04f1f] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                   >
-                    <Image
-                      src="/sendMail.png"
-                      alt=""
-                      width={20}
-                      height={20}
-                    />
+                    <Image src="/sendMail.png" alt="" width={20} height={20} />
                     Send Email
                   </button>
                 </form>
@@ -243,24 +240,24 @@ const ContactSection = () => {
 
           {/* Navigation Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mb-6">
-            <a
-              href="#"
+            <button
+              onClick={() => scrollToSection("about")}
               className="text-white/90 hover:text-white transition-colors font-medium text-[20px]"
             >
               About Us
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => scrollToSection("vision")}
               className="text-white/90 hover:text-white transition-colors font-medium text-[20px]"
             >
               Our Vision
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
               className="text-white/90 hover:text-white transition-colors font-medium text-[20px]"
             >
               Contact Us
-            </a>
+            </button>
           </div>
         </div>
 
