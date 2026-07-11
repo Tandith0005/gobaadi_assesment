@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐄 Gobaadi – AI-Powered Livestock Care Platform
 
-## Getting Started
+A modern, responsive landing page built with **Next.js**, **React**, and **Tailwind CSS** for **Gobaadi**, a platform that connects farmers with licensed veterinarians while leveraging AI to improve livestock healthcare.
 
-First, run the development server:
+## 🌐 Overview
+
+Gobaadi aims to make veterinary services more accessible by allowing farmers to:
+
+- Book licensed veterinarians
+- Receive AI-assisted livestock health insights
+- Generate personalized livestock management content
+- Access educational resources created by veterinarians
+- Improve animal healthcare through digital technology
+
+---
+
+## ✨ Features
+
+- ✅ Fully responsive design
+- ✅ Modern UI inspired by Figma
+- ✅ Sticky navigation with smooth scrolling
+- ✅ About section
+- ✅ Vision section
+- ✅ Contact section
+- ✅ Beautiful gradients and background effects
+- ✅ Optimized images using Next.js Image component
+- ✅ Mobile-friendly layout
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 15**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Icons**
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+├── components/
+│   ├── sections/
+│   │   ├── HeroSection.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── VisionSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   └── ComingSoon.tsx
+│   │
+│   └── shared/
+│       └── Navbar.tsx
+│
+├── constants/
+│   └── navigation.ts
+│
+└── styles/
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Tandith0005/gobaadi_assesment
+```
+
+### Navigate into the project
+
+```bash
+cd gobaadi_assesment
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn
+```
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run production server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Responsive Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The landing page is optimized for:
+
+- Mobile
+- Tablet
+- Laptop
+- Desktop
+
+---
+
+## 🎨 Design
+
+The UI is implemented from a Figma design while maintaining:
+
+- Clean layout
+- Consistent spacing
+- Modern typography
+- Responsive behavior
+- Smooth scrolling navigation
+
+---
+
+## 📄 License
+
+This project is created for educational and portfolio purposes.
+
+---
+
+## 👨‍💻 Author
+
+**Sadnan Zaman**
+
+GitHub: https://github.com/Tandith0005
+
+LinkedIn: https://www.linkedin.com/in/sadnanzaman
