@@ -129,7 +129,7 @@ const VisionSection = () => {
               </div>
 
               {/* Vision 3 - Bottom Left (Small) */}
-              <div className="absolute top-[200px] sm:top-[250px] lg:top-[300px] left-[10%] sm:left-[15%] lg:right-[0px] lg:left-auto">
+              <div className="absolute top-[150px] sm:top-[220px] lg:top-[300px] left-[10%] sm:left-[15%] lg:right-[0px] lg:left-auto">
                 <div className="relative w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] lg:w-[200px] lg:h-[200px]">
                   <Image
                     src="/vision3.png"
