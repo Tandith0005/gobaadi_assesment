@@ -18,7 +18,7 @@ const AboutSection = () => {
 
         {/* Sky (Front) */}
         <div
-          className="absolute top-0 left-0 right-0 h-[300px] sm:h-[300px] lg:h-[500px] z-10"
+          className="absolute top-0 md:top-0 left-0 right-0 h-[300px] sm:h-[300px] lg:h-[500px] z-10"
           style={{
             backgroundImage: "url('/sky.png')",
             backgroundRepeat: "no-repeat",
@@ -56,9 +56,9 @@ const AboutSection = () => {
             <div className="h-[60px] sm:h-[90px] lg:h-[130px]"></div>
 
             {/* Three Images in Flex */}
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-[26px] justify-center items-center">
+            <div className="flex sm:flex-col md:flex-row gap-4 md:gap-[26px] justify-center items-center">
               {/* About Image 1 */}
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:min-w-[420px] h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="relative w-[100px] max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:min-w-[420px] h-[80px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <Image
                   src="/about1.png"
                   alt="About 1"
@@ -68,7 +68,7 @@ const AboutSection = () => {
               </div>
 
               {/* About Image 2 */}
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:min-w-[420px] h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] sm:-top-5 md:-top-8 lg:-top-10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="relative w-[100px] max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:min-w-[420px] h-[80px] sm:h-[320px] md:h-[380px] lg:h-[420px] sm:-top-5 md:-top-8 lg:-top-10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <Image
                   src="/about2.png"
                   alt="About 2"
@@ -78,7 +78,7 @@ const AboutSection = () => {
               </div>
 
               {/* About Image 3 */}
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:min-w-[420px] h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="relative w-[100px] max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:min-w-[420px] h-[80px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <Image
                   src="/about3.png"
                   alt="About 3"
