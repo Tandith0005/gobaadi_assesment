@@ -43,7 +43,7 @@ const AboutSection = () => {
             </h2>
 
             {/* Description */}
-            <p className="text-[#262626] text-base sm:text-lg md:text-xl lg:text-[25px] leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
+            <p className="text-[#262626] text-[13px] md:text-xl lg:text-[25px] leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
               Our platform enables farmers to access veterinary care, book
               services from licensed veterinarians, receive AI-assisted health
               insights, and generate personalized livestock management content.
