@@ -88,7 +88,7 @@ const VisionSection = () => {
                   AI-Powered Insights & Marketplace
                 </h4>
                 <p className="text-[#737373] text-xs sm:text-sm leading-relaxed">
-                  Smart AI results for better decisions, plus a marketplace <br /> for services, products, and care solutions.
+                  Smart AI results for better decisions, plus a marketplace <br className="hidden sm:block" /> for services, products, and care solutions.
                 </p>
               </div>
             </div>
@@ -98,13 +98,13 @@ const VisionSection = () => {
         {/* Right Side - Image Grid */}
         <div className="flex-1 relative w-full lg:w-auto mt-10 lg:mt-0">
           <div className="relative w-full max-w-md mx-auto lg:max-w-none">
-            {/* absolute background */}
-            <div className="absolute top-[85px] right-[100px] w-[426px] h-[338px] bg-[#FD5B2F]/5 rounded-tl-[140px] hidden lg:block"></div>
+            {/* absolute background - centered on mobile */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[426px] lg:h-[338px] lg:top-[85px] lg:right-[100px] lg:left-auto lg:translate-x-0 lg:translate-y-0 bg-[#FD5B2F]/5 rounded-tl-[140px]"></div>
             
             {/* relative container for images */}
             <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px]">
               {/* Vision 1 - Top Left (Small) */}
-              <div className="absolute top-0 right-[20%] sm:right-[25%] lg:right-[103px]">
+              <div className="absolute top-0 left-[10%] sm:left-[20%] lg:right-[103px] lg:left-auto">
                 <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-[84px] lg:h-[84px]">
                   <div className="absolute -top-3 -right-2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-[#C96A39]/50" />
                   <Image
@@ -117,7 +117,7 @@ const VisionSection = () => {
               </div>
 
               {/* Vision 2 - Top Right (Medium) */}
-              <div className="absolute top-[30px] sm:top-[35px] lg:top-[40px] right-[30%] sm:right-[35%] lg:right-[200px]">
+              <div className="absolute top-[30px] sm:top-[35px] lg:top-[40px] right-[10%] sm:right-[20%] lg:right-[200px]">
                 <div className="relative w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] lg:w-[240px] lg:h-[240px]">
                   <Image
                     src="/vision2.png"
@@ -129,19 +129,19 @@ const VisionSection = () => {
               </div>
 
               {/* Vision 3 - Bottom Left (Small) */}
-              <div className="absolute top-[200px] sm:top-[250px] lg:top-[300px] right-[5%] sm:right-[10%] lg:right-[0px]">
+              <div className="absolute top-[200px] sm:top-[250px] lg:top-[300px] left-[10%] sm:left-[15%] lg:right-[0px] lg:left-auto">
                 <div className="relative w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] lg:w-[200px] lg:h-[200px]">
                   <Image
                     src="/vision3.png"
                     alt="Vision 3"
                     fill
-                    className="rounded-full object-cover"
+                    className="rounded-full object-cover z-1"
                   />
                 </div>
               </div>
 
               {/* Vision 4 - Bottom Right (Medium) */}
-              <div className="absolute top-[280px] sm:top-[340px] lg:top-[400px] right-[25%] sm:right-[30%] lg:right-[200px]">
+              <div className="absolute top-[280px] sm:top-[340px] lg:top-[400px] right-[10%] sm:right-[20%] lg:right-[200px]">
                 <div className="relative w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[320px] lg:h-[320px]">
                   <div className="absolute top-3 left-0 w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] lg:w-[100px] lg:h-[100px] rounded-full bg-[#C96A39]" />
                   <Image

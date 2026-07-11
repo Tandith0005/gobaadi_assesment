@@ -12,8 +12,8 @@ const ComingSoon = () => {
     <section className="py-[90px] pl-4 pr-0 sm:pl-6 sm:pr-0 lg:pl-8 bg-gradient-to-br bg-[#ffffff]">
       <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         {/* Left Side - Text Content */}
-        <div className="flex-1">
-          <h2 className={`text-4xl sm:text-5xl md:text-[87px] font-bold text-[#171717] leading-tight ${audiowide.className}`}>
+        <div className="flex-1 mx-auto text-center lg:text-left">
+          <h2 className={`text-3xl sm:text-2xl md:text-[87px] md:text-start text-center font-bold text-[#171717] leading-tight ${audiowide.className}`}>
             Something <br />
             New Is
           </h2>
@@ -35,7 +35,7 @@ const ComingSoon = () => {
             </span>
           </div>
 
-          <p className="text-[#171717] text-[56px] font-semibold pt-[64px]">
+          <p className="text-[#171717] md:text-[56px] text-3xl font-semibold md:pt-[64px] pt-[34px]">
             Our new and improved <br />
             digital livestock platform.
           </p>
