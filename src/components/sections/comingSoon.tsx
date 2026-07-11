@@ -9,13 +9,11 @@ const audiowide = Audiowide({
 
 const ComingSoon = () => {
   return (
-    <section className="py-[90px] pl-4 pr-0 sm:pl-6 sm:pr-0 lg:pl-8  bg-gradient-to-br bg-[#ffffff]">
-      <div
-        className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-16 `}
-      >
+    <section className="py-[90px] pl-4 pr-0 sm:pl-6 sm:pr-0 lg:pl-8 bg-gradient-to-br bg-[#ffffff]">
+      <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         {/* Left Side - Text Content */}
         <div className="flex-1">
-          <h2 className={`text-4xl sm:text-5xl md:text-[87px] font-bold text-[#171717] leading-tight ${audiowide.className} `}>
+          <h2 className={`text-4xl sm:text-5xl md:text-[87px] font-bold text-[#171717] leading-tight ${audiowide.className}`}>
             Something <br />
             New Is
           </h2>
@@ -45,7 +43,7 @@ const ComingSoon = () => {
 
         {/* Right Side - Image */}
         <div className="flex-1 flex justify-center lg:justify-end">
-          <div className="relative w-full ">
+          <div className="relative w-full max-w-[500px] md:max-w-full">
             <Image
               src="/coming.png"
               alt="Coming Soon"
